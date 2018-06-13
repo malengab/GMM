@@ -6,24 +6,21 @@ import matplotlib.pyplot as plt
 from numpy.matlib import zeros
 import pdb
 
-#%matplotlib inline
-
-def generate_data(N,bump_max):
-	fction = lambda x,y,a: a*np.exp(-10*(y-x)**2)
-	d,eps = 3, 0.1; 		# domain length/2
-#	N = 100	# nr of pts
-	rep = np.random.randint(bump_max)	# how many bumps	
+def generate_data(N,bump_max):		# N discretization pts, bump_max max number of bumps
+	fction = lambda x,y,a: a*np.exp(-10*(y-x)**2)	# Gaussian fction
+	d = 3; 		# domain length/2
+	rep = np.random.randint(1,bump_max)	# how many bumps	
 	x = np.linspace(-d, d, N)	# domain pts
-	hstep = 2*d/(N-1);	# steplength
-	y = fction(x,2-4*np.random.random(),1)	# initialization
-	for r in range(0,rep-1):
+#	hstep = 2*d/(N-1);	# steplength
+	y = fction(x,0,0)	# initialization, zero everywhere
+	for r in range(0,rep):
 		cen = 2-4*np.random.random()
 		y = y + fction(x,cen,1)		# solution superposed
-	yder = np.array((y[1:]-y[0:len(y)-1]), dtype='f')/hstep	# function derivative
-	ydata = np.concatenate((y,yder), axis=0)
-#	pdb.set_trace()
+#	yder = np.array((y[1:]-y[0:len(y)-1]), dtype='f')/hstep	# function derivative
+#	ydata = np.concatenate((y,yder), axis=0)
 	rep_one_hot = [0]*bump_max;	# save label as [0,... 0,1,0,... 0]
 	rep_one_hot[rep] = 1;
+
 #	plt.figure(1)
 ##	print(rep_one_hot)
 #	plt.scatter(x[0:], y, c='green', label='train')
@@ -39,7 +36,7 @@ def generate_data(N,bump_max):
 def create_feature_sets_and_labels(repeat,test_size,bump_max):
 	features = []
 	for ii in range(repeat):
-		features += [generate_data(200,bump_max)]
+		features += [generate_data(100,bump_max)]
 	random.shuffle(features)
 	features = np.array(features)
 
