@@ -5,7 +5,7 @@ import pdb
 import math, random
 from gb import generate_data
 
-N = 100; 	# nr of discretization pts
+N = 200; 	# nr of discretization pts
 bump_max = 10; 	# max nr of Gaussian components
 y, nr_bumps = generate_data(N,bump_max) 	# nr of bumps is in one-hot style
 y = y/sum(y)	# normalize to 1
