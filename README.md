@@ -1,5 +1,6 @@
 # Gaussian Mixture Models
-Gaussian mixture models, that is a function that can be written as a sum of Gaussian functions
+Gaussian mixture models, that is a function that can be written as a sum of Gaussian functions. 
+
 Purpose: find the coefficients, variances and means of the underlying Gaussian functions given the superposed function
 
 Files:
@@ -13,7 +14,9 @@ Uses 3 hidden tensorflow layers to teach the neural network to recognize the num
 GMM.py
 Expectation-maximization technique (unsupervised learning) to determine the means, coefficients and variances of the GB functions given the superposition function values obtained again from gb.py (normalized to 1). The number of bumps is assumed to be known.
 
-credits: Tensorflow and python tutorial in
+credits: 
+
+Tensorflow and python tutorial in
 https://pythonprogramming.net/tensorflow-neural-network-session-machine-learning-tutorial/?completed=/tensorflow-deep-neural-network-machine-learning-tutorial/
 
 G. Ariel, B. Enquist, N. M. Tanushev, R. Tsai: Gaussian beam decomposition of high frequency wave fiels using expectation-maximization, J of Comp Phys, 2011.
