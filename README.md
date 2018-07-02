@@ -1,5 +1,5 @@
-# GMM
-# aka Gaussian mixture models, that is a function that can be written as a sum of Gaussian functions
+# Gaussian Mixture Models
+Gaussian mixture models, that is a function that can be written as a sum of Gaussian functions
 Purpose: find the coefficients, variances and means of the underlying Gaussian functions given the superposed function
 
 Files:
@@ -15,4 +15,5 @@ Expectation-maximization technique (unsupervised learning) to determine the mean
 
 credits: Tensorflow and python tutorial in
 https://pythonprogramming.net/tensorflow-neural-network-session-machine-learning-tutorial/?completed=/tensorflow-deep-neural-network-machine-learning-tutorial/
+
 G. Ariel, B. Enquist, N. M. Tanushev, R. Tsai: Gaussian beam decomposition of high frequency wave fiels using expectation-maximization, J of Comp Phys, 2011.
