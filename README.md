@@ -1,9 +1,12 @@
 # Gaussian Mixture Models
-Gaussian mixture models, that is a function that can be written as a sum of Gaussian functions. 
+Gaussian mixture models (GMM) = functions that can be written as a sum of Gaussian functions. 
 
 Purpose: find the coefficients, variances and means of the underlying Gaussian functions given the superposed function
 
 Files:
+
+GMMdescr.pdf
+Math model and description of the project.
 
 gb.py
 Generates a set of training and test data given the number of repeats, the size of the test set (in %) and the maximal number of Gaussian elements (bump_max). Each entry then includes function values of a 1D GMM function given the number of discretization points (set to N=100 for now) over a fixed [-3,3] interval. All amplitudes are set to 1 and the number of GB bumps is chosen randomly, bound by bump_max.
